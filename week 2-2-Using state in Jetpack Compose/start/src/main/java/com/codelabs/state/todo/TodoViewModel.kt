@@ -51,8 +51,9 @@ class TodoViewModel : ViewModel() {
 
     fun onEditItemChange(item: TodoItem) {
         val currentItem = requireNotNull(currentEditItem)
-        require(currentItem.id == item.id) {
 
+        require(currentItem.id == item.id) {
+            "You can only change an item with the same id as currentEditItem"
         }
 
         todoItems[currentEditPosition] = item
