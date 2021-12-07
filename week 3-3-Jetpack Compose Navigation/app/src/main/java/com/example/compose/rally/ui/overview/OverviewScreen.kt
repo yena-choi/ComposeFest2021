@@ -16,6 +16,7 @@
 
 package com.example.compose.rally.ui.overview
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -190,6 +191,7 @@ private fun <T> OverviewScreenCard(
                 SeeAllButton(
                     modifier = Modifier.clearAndSetSemantics {
                         contentDescription = "All $title"
+                        Log.e("YENA!!", "overview card description : All $title")
                     },
                     onClick = onClickSeeAll,
                 )
